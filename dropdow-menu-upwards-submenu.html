@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div style="height: 300px">
+        <ul class='menu--main'>
+            <!-- <li>Home</li>
+            <li>About</li>
+            <li>
+                Portfolio
+                <ul class='sub-menu'>
+                    <li>Web Design</li>
+                    <li>Web Development</li>
+                    <li>Illustrations</li>
+                </ul>
+            </li> -->
+            <li>Settings
+                <ul class='sub-menu'>
+                    <li>button 1</li>
+                    <li>speed
+                        <ul class='subb-menu'>
+                            <li>0.5</li>
+                            <li>1</li>
+                            <li>1.5</li>
+                        </ul>
+                    </li>
+                    <li>quality
+                        <ul class='subb-menu'>
+                            <li>640</li>
+                            <li>720</li>
+                            <li>auto</li>
+                        </ul>
+                    </li>
+                    <li>button 2</li>
+                </ul>
+            </li>
+            <!-- <li>Contact</li> -->
+        </ul>
+    </div>
+</body>
+
+<style>
+    body {
+        margin: 20px;
+    }
+
+    li:first-child {
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+    }
+    li:last-child {
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .menu--main {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        padding: 0;
+    }
+
+    .menu--main li {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        padding: 15px 20px;
+        background-color: gray;
+        margin-right: -4px;
+    }
+
+    .menu--main li:hover {
+        background-color: darkgray;
+    }
+
+    .menu--main li:hover .sub-menu {
+        max-height: 300px;
+        visibility: visible;
+        bottom: 100%;
+        transition: all 0.4s linear;
+        opacity: 1;
+    }
+
+    .sub-menu {
+        display: block;
+        visibility: hidden;
+        position: absolute;
+        left: 0;
+        box-shadow: none;
+        max-height: 0;
+        width: 150px;
+        padding-left: 0;
+        opacity: 0;
+        overflow: visible;
+
+    }
+
+    .sub-menu li {
+        display: block;
+    }
+
+    .sub-menu li:hover .subb-menu {
+        max-height: 300px;
+        visibility: visible;
+        opacity: 1;
+        left: 100%;
+        transition: all 0.2s linear;
+    }
+
+    .subb-menu {
+        display: block;
+        visibility: hidden;
+        position: absolute;
+        left: 70%;
+        box-shadow: none;
+        max-height: 0;
+        width: 150px;
+        top: 0;
+        padding-left: 0;
+        opacity: 0;
+
+        overflow: visible;
+    }
+
+    .subb-menu li {
+        background-color: lightblue;
+    }
+
+    .subb-menu li:hover {
+        background-color: rgb(132, 167, 178);
+    }
+</style>
+
+</html>
